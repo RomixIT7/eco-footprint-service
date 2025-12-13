@@ -103,3 +103,70 @@ a {
   color: #007bff;
   margin-bottom: 5px;
 }
+
+/* Стилі для select та readonly input */
+.form-group select,
+.form-control-readonly {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff; /* Для select */
+}
+
+/* Стиль для Readonly поля */
+.form-control-readonly {
+  background-color: #e9ecef; /* Сірий фон для візуального відділення */
+  cursor: default;
+}
+
+/* Стилі для елементів списку домогосподарств */
+.household-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.household-item {
+  flex-basis: 300px; /* Фіксована ширина */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.household-item:hover {
+  border-color: #007bff;
+  transform: translateY(-2px);
+}
+
+/* Стиль для активного домогосподарства */
+.active-household {
+  border: 3px solid #007bff; /* Яскрава рамка */
+  background-color: #e6f2ff; /* Світло-синій фон */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Стилі для елементів записів */
+.records-list {
+  margin-top: 10px;
+}
+
+.record-item {
+  padding: 10px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.record-item:last-child {
+  border-bottom: none;
+}
+
+.record-item p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #555;
+}
