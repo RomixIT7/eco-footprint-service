@@ -1,0 +1,105 @@
+/* client/src/index.css (БАЗОВІ СТИЛІ) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 20px;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.header ul li a,
+.header ul li button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin-left: 5px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s;
+}
+
+.header ul li a:hover,
+.header ul li button:hover {
+  color: #007bff; /* Синій для hover */
+}
+
+/* Кнопки */
+.btn {
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  background: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/* Форма */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.content {
+  padding: 20px 0;
+}
+
+/* Елемент домогосподарства */
+.household-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.household-item h3 {
+  color: #007bff;
+  margin-bottom: 5px;
+}
