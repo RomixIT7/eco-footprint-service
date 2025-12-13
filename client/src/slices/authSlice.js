@@ -1,7 +1,18 @@
-// client/src/slices/authSlice.js (ПОВНИЙ ЧИСТИЙ КОД)
-
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+
+// ===================================================================
+// 💡 ВИПРАВЛЕННЯ: Конфігурація URL для деплойменту (Netlify -> Render)
+// ===================================================================
+
+// Отримуємо базовий URL (з Netlify: https://eco-footprint-service.onrender.com)
+// Якщо змінна оточення відсутня (наприклад, локально), використовуємо порожній рядок.
+const API_BASE_URL = import.meta.env.VITE_REACT_APP_BACKEND_URL || "";
+
+// Формуємо повний URL для ресурсів користувача
+const API_URL = `${API_BASE_URL}/api/users/`;
+
+// ===================================================================
 
 // Отримуємо користувача з Local Storage
 const user = JSON.parse(localStorage.getItem("user"));
@@ -15,13 +26,12 @@ const initialState = {
   message: "",
 };
 
-const API_URL = "/api/users/";
-
 // Реєстрація користувача
 export const register = createAsyncThunk(
   "auth/register",
   async (user, thunkAPI) => {
     try {
+      // response тепер відправлятиме запит на: https://eco-footprint-service.onrender.com/api/users/
       const response = await axios.post(API_URL, user);
 
       if (response.data) {
@@ -44,6 +54,7 @@ export const register = createAsyncThunk(
 // Вхід користувача
 export const login = createAsyncThunk("auth/login", async (user, thunkAPI) => {
   try {
+    // response тепер відправлятиме запит на: https://eco-footprint-service.onrender.com/api/users/login
     const response = await axios.post(API_URL + "login", user);
 
     if (response.data) {
