@@ -10,7 +10,7 @@ import axios from "axios";
 const API_BASE_URL = import.meta.env.VITE_REACT_APP_BACKEND_URL || "";
 
 // Формуємо повний URL для ресурсів користувача
-const API_URL = `${API_BASE_URL}/api/users/`;
+const API_URL = `${API_BASE_URL}/api/auth/`;
 
 // ===================================================================
 
